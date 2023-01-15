@@ -1,9 +1,21 @@
 \documentclass[12pt]{article}
+\usepackage[]{hyperref}
+\hypersetup{
+    pdftitle={Your title here},
+    pdfauthor={Jumar Martin},
+    pdfsubject={Your subject here},
+    bookmarksnumbered=true,     
+    colorlinks=true,            
+    pdfstartview=Fit,           
+    pdfpagemode=UseOutlines,    % this is the option you were lookin for
+    pdfpagelayout=TwoPageRight
+}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage{setspace}
 \usepackage{times}
+\usepackage{fontspec}
 
 \usepackage{graphicx}
 \usepackage[graphicx]{realboxes}
@@ -24,8 +36,27 @@
 
 \renewcommand{\thesection}{\Roman{section}} 
 \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+\newcommand{\pointer}[1]{{\color{red} \center \textit{#1}}}
 
 \cfoot{\thepage}
 \begin{document}
-\section{When you working hard and your money start expanding}
+\section{Introduction}
+
+\pointer{Defining the nature of the problem}
+
+As the world becomes connected through the democratization of international travel, the disparate cultures that dot the land collide, engage, and in time blend together.
+In tandem with culture, knowledge and talent also erode the political boundaries that have traditionally separated nations.
+Countries find these two qualities of individuals extremely valuable and begin to actively seek and entice them to leave their home country for more opportunities, often to the detriment of their home countries; a phenomenon commonly known as the ``brain drain'' effect.
+This ``brain drain'' effect refers to the intentional migration of highly skilled and educated people from one country to another in search of better opportunities and wages. 
+Furthermore, the effect can carry potential consequences for the source country through losing their most talented citizens who could have, instead, contributed to innovation within their borders than beyond.
+All is not lost for the source, usually developing, countries though; literature shows that these countries are able to recoup their losses through a multitude of ways.
+
+
+
+\pointer{Paragraphs 2-4: Casting the problem as an economic question (at least two, maybe 3 paragraphs depending on the topic)}
+
+\pointer{Define your research question}
+
+\pointer{Identify probable data source and sample}
+
 \end{document}
