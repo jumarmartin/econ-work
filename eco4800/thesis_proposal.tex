@@ -1,62 +1,96 @@
 \documentclass[12pt]{article}
-\usepackage[]{hyperref}
-\hypersetup{
-    pdftitle={Your title here},
-    pdfauthor={Jumar Martin},
-    pdfsubject={Your subject here},
-    bookmarksnumbered=true,     
-    colorlinks=true,            
-    pdfstartview=Fit,           
-    pdfpagemode=UseOutlines,    % this is the option you were lookin for
-    pdfpagelayout=TwoPageRight
-}
+\usepackage[hidelinks]{hyperref}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage{setspace}
 \usepackage{times}
 \usepackage{fontspec}
-
 \usepackage{graphicx}
 \usepackage[graphicx]{realboxes}
-
 \usepackage[authordate, backend=biber]{biblatex-chicago}
+\addbibresource{./bdrain.bib}
 
-% \graphicspath{ {./images/} }
-\addbibresource{./ECO4800.bib}
-% 
+\doublespacing
 \pagestyle{fancy}
 \fancyhf{}
 
-\rhead{Jumar Martin}
-\doublespacing
 \lhead{ECO 4800}
-
 \chead{Thesis Proposal: In the Face of Globalization}
+\rhead{Jumar Martin}
+
+\cfoot{\thepage}
 
 \renewcommand{\thesection}{\Roman{section}} 
 \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
 \newcommand{\pointer}[1]{{\color{red} \center \textit{#1}}}
+\hypersetup{
+    pdftitle={Dissertation Proposal: In the Face of Globalization},
+    pdfauthor={Jumar Martin},
+    pdfsubject={Interational and Trade Economics},
+    bookmarksnumbered=true,     
+    colorlinks=false,            
+    pdfstartview=Fit,           
+    pdfpagemode=UseOutlines,
+    pdfpagelayout=TwoPageRight
+}
 
-\cfoot{\thepage}
+
+
 \begin{document}
 \section{Introduction}
-
 \pointer{Defining the nature of the problem}
 
-As the world becomes connected through the democratization of international travel, the disparate cultures that dot the land collide, engage, and in time blend together.
-In tandem with culture, knowledge and talent also erode the political boundaries that have traditionally separated nations.
-Countries find these two qualities of individuals extremely valuable and begin to actively seek and entice them to leave their home country for more opportunities, often to the detriment of their home countries; a phenomenon commonly known as the ``brain drain'' effect.
-This ``brain drain'' effect refers to the intentional migration of highly skilled and educated people from one country to another in search of better opportunities and wages. 
+As the world becomes connected through the democratization of international travel, the disparate cultures that dot the land collide, engage, and in time blend.
+In tandem with culture, knowledge, and talent also erode the political boundaries that have traditionally separated nations.
+Countries find these two qualities of individuals extremely valuable and begin to actively seek and entice them to leave their home country for more opportunities, often to the detriment of their home countries; a phenomenon commonly known as the “brain drain” effect.
+This “brain drain” effect refers to the intentional migration of highly skilled and educated people from one country to another in search of better opportunities and wages
 Furthermore, the effect can carry potential consequences for the source country through losing their most talented citizens who could have, instead, contributed to innovation within their borders than beyond.
-All is not lost for the source, usually developing, countries though; literature shows that these countries are able to recoup their losses through a multitude of ways.
+All is not lost for the source, usually developing, countries though; literature shows that these countries can partially recoup their losses through a multitude of ways.
+
+\pointer{Paragraphs 2-4: Casting the problem as an economic question (at least two, maybe 3 paragraphs depending on the topic) This is so fucking hard}
+
+The question remains out on whether brain drain can be positive or not.
+The literature today touches on a bevy of reasons brain drain occurs and the impact on the innovation quotient and efficiency gains or losses for the countries on each leg of the effect.
+From knowledge flows, remittances, push factors like development level and the pull factors defined by the same determinants, the intensity of the effect remains high for the highly-skilled immigrant.
+In a lot of papers, there was not a lot of empirical evidence that backed their theory, instead opting for publishing extensive models and frameworks that would set up researchers in the future.
+The reason for these papers being constrained to theory was due to the lack of usable and complete data sources at the time of publishing.
+In the coming years, more complete data was published.
+
+With more expansive macro-level migration data becoming available from the Organization for Economic Cooperation and Development (OECD), United Nations Educational, Scientific and Cultural Organization (UNESCO), and the International Labour Organization (ILO) more empirical models have been developed in the literature and used in their regressions.
+On the micro-level, survey data such as the Survey of Health, Ageing and Retirement in Europe and the European Community Household Panel allow for the examination of the characteristics and behaviors of individual high-skilled immigrants and their choices.
+From there, we've seen an expansion in the analysis of the different avenues that migration and the effect brain drain has on destination and source countries.
+These excursions into incorporating data into models for review have answered some questions on the significance of the correlation between investing in the education of the source country and the migration rate from source to destination, the number of remittances in correlation with the migration of highly-skilled individuals, and the policy changes of Intellectual Property Rights (IPRs) to lure inventors to certain countries over others.
+The concept of the ability of the source country to gain even when losing human capital to destination countries—known as the ``Beneficial Brain Drain''—has also been a topic of conversation though, we explore this at the intersection of innovation through patent creation in source and destination countries.
+
+% \pointer{rewrite}
+% {\color{gray}
+% With the availability of more expansive macro-level migration data from organizations such as the Organization for Economic Cooperation and Development (OECD), United Nations Educational, Scientific and Cultural Organization (UNESCO) and the International Labour Organization (ILO), researchers have been able to develop more robust empirical models to investigate the effects of brain drain on both the source and destination countries.
+% These models utilize data from a variety of sources, including micro-level survey data such as the Survey of Health, Ageing and Retirement in Europe and the European Community Household Panel to examine the characteristics and behaviors of individual high-skilled immigrants and their decision-making processes.
+
+% The incorporation of this data into models has enabled researchers to delve deeper into the intricacies of the relationship between brain drain and economic growth, and has provided new insights into the significance of factors such as investment in education in the source country, the correlation between remittances and the migration of highly-skilled individuals, and the impact of Intellectual Property Rights (IPRs) policies on the migration of inventors.
+% }
+\pointer{Define your research question (How impactful is brain drain on innovation?)}
+
+With brain drain being found as a significant effect in the literature, we're interested in developing a further understanding of its impact on innovation in both source and destination countries.
+Since immigrants, in general, can find jobs in their destination countries that provide enough to remit a portion of their wages, impacting the GDP of their home country, isolating for the impact highly-skilled immigrants is interesting as we can measure the improvement in innovation or lack thereof that occur when a country is affected by the effect in contrast with the destination country of their departing inventors.
+Countries that are usually subject to the brain drain effect should not be relegated to being lower developed forever; evaluating whether the effect furthers this experience or, instead, retards such is important for suggesting policy in these countries.
+On the other side of the effect, the paper will also inform destination countries on whether to continue appealing to high-skilled workers as well and which policies work best in winning over these individuals.
 
 
+% With brain drain being recognized as a significant phenomenon in the literature, we are interested in gaining a deeper understanding of its impact on innovation in both source and destination countries.
+% By isolating the impact of highly-skilled immigrants specifically, we can measure the improvement or lack thereof in innovation that occurs when a source country is affected by brain drain in contrast to the destination country where the immigrants are relocating.
 
-\pointer{Paragraphs 2-4: Casting the problem as an economic question (at least two, maybe 3 paragraphs depending on the topic)}
+% It is important to note that countries that are usually subject to brain drain should not be resigned to being permanently lower developed.
+% Evaluating whether the effect furthers or retards this experience is crucial for suggesting effective policies for these countries. On the other side of the equation, the research will also inform destination countries on whether to continue attracting highly-skilled workers and which policies work best in attracting them.
+% The study will provide insights on how to balance the positive and negative effects of brain drain, to ensure that both source and destination countries can benefit from it.
 
-\pointer{Define your research question}
+% The research aims to gain a deeper understanding of the impact of brain drain on innovation in both source and destination countries.
+% By isolating the impact of highly-skilled immigrants specifically, the study aims to measure the improvement or lack thereof in innovation that occurs when a source country is affected by brain drain in contrast to the destination country where the immigrants are relocating.
+% The research also aims to evaluate how brain drain affects the development of the source country, and how it can inform policies for both source and destination countries to attract and retain highly-skilled immigrants in a way that balances the positive and negative effects of brain drain.
+% In essence, this research seeks to answer the question of how significant the impact of brain drain is on innovation.
 
 \pointer{Identify probable data source and sample}
 
+\printbibliography
 \end{document}
