@@ -1,3 +1,5 @@
 *
 !*.tex
+!*.ipynb
 !*.md
+!*gii_analysis/gii_2013_2020.csv

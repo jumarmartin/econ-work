@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage[graphicx]{realboxes}
 \usepackage[authordate, backend=biber]{biblatex-chicago}
+\usepackage{amsmath}
 \addbibresource{./bdrain.bib}
 
 \doublespacing
@@ -54,7 +55,7 @@ However, the existing literature suggests that source countries can partially re
 The impact of "brain drain" on source countries is still debated.
 Research today touches on a bevy of reasons brain drain occurs and the impact on the innovation quotient and efficiency gains or losses for the countries on each leg of the effect.
 From knowledge flows, remittances, push factors like development level and the pull factors defined by the same determinants, the intensity of the effect remains high for the highly-skilled immigrant.
-In \citeauthor{hall_brain_2005}, for instance, opts for a discussion on the theoretical aspects of the effect and the impact on the source country's GDP with a small estimation that comes with a warning to derive policy carefully. In \citeauthor{beine_brain_2001}, the authors write that their paper is to the best of their knowledge ``the first attempt proposing an empirical validation'' of beneficial brain drain using cross-section data on 37 countries.
+In \cite{hall_brain_2005}, for instance, opts for a discussion on the theoretical aspects of the effect and the impact on the source country's GDP with a small estimation that comes with a warning to derive policy carefully. In \citeauthor{beine_brain_2001}, the authors write that their paper is to the best of their knowledge ``the first attempt proposing an empirical validation'' of beneficial brain drain using cross-section data on 37 countries.
 Most of the literature that began to explore the effect was grounded in economic theory alone.
 The lack of usable and complete data sources at the time of publishing resulted in these papers not having an empirical basis or section.
 
@@ -62,12 +63,12 @@ With the availability of more expansive macro-level migration data from organiza
 On the micro-level, survey data such as the Survey of Health, Ageing and Retirement in Europe and the European Community Household Panel allow for the examination of the characteristics and behaviors of individual high-skilled immigrants and their choices.
 Further analysis has been conducted on the various impacts of brain drain on both destination and source countries.
 Incorporating data into models has provided insight into the correlation between investing in the education of the source country and the migration rate from source to destination \autocite{beine_brain_2001}, the number of remittances in correlation with the migration of highly-skilled individuals, and the policy changes of Intellectual Property Rights (IPRs) to lure inventors to certain countries over others \autocite{mcausland_bidding_2011}.
-The concept of the ability of the source country to gain even when losing human capital to destination countries—known as the ``Beneficial Brain Drain''—has also been detailed in \citeauthor{kuhn_international_2006}.
+The concept of the ability of the source country to gain even when losing human capital to destination countries—known as the ``Beneficial Brain Drain''—has also been detailed in \cite{kuhn_international_2006}.
 
 Brain drain, while having some positive effects, can also have negative consequences for the destination country.
 Economic theory suggests that an influx of highly-skilled immigrants can lead to a decrease in wages and eventually repatriation of those immigrants back to their home country.
-The research of \citeauthor{chiswick_high_2005} and \citeauthor{hussain_reversing_2015} both show that the ``brain gain'' effect can carry a negative impact on wages in the destination country.
-\citeauthor{hussain_reversing_2015} goes further and highlights, using a life cycle model, that repatriation of immigrants can have a positive impact on the production of the home country due to the knowldege and expertise they bring back with them. 
+The research of \cite{chiswick_high_2005} and \cite{hussain_reversing_2015} both show that the ``brain gain'' effect can carry a negative impact on wages in the destination country.
+\cite{hussain_reversing_2015} goes further and highlights, using a life cycle model, that repatriation of immigrants can have a positive impact on the production of the home country due to the knowldege and expertise they bring back with them. 
 % This negative effect of the ``brain gain'' effect is confirmed in \citeauthor{chiswick_high_2005} where he notes that the ``the immigration of high-skilled workers tends to lower the marginal product, and hence wages...'' while in \citeauthor{hussain_reversing_2015}, who employed a life cycle framework to model help this effect,  immigrants who repatriate has a positive impact on the production of their home country due to the knowledge and expertise they bring back with them.
 
 Despite the fact that the literature has been able to answer some questions, there still remain a number of questions that have yet to be answered with empirical rigor.
@@ -81,10 +82,15 @@ Despite the fact that the literature has been able to answer some questions, the
 % }
 \pointer{Define your research question (How impactful is brain drain on innovation?)}
 
-With brain drain being found as a significant effect in the literature, we're interested in developing a further understanding of its impact on innovation in both source and destination countries.
-Through focusing on the impact of highly-skilled immigrants, we can measure the improvement or lack thereof in innovation when a country experiences brain drain or, in contrast, brain gain.
-This information can inform countries that are subject to brain drain and help develop policies that would lessen the effects of brain drain.
-On the other side of the effect, the paper will also provide insight to destination countries on whether to continue appealing to high-skilled workers as well and which policies work best in winning over these individuals.
+Our research aims to deepen the understanding of the impact of brain drain on innovation, specifically by analyzing patenting trends among countries that attract highly-skilled immigrants in contrast to where they emigrated from.
+By analyzing patent data, we can measure the effect of brain drain or gain on innovation.
+Our findings will provide valuable insights for source and destination countries alike on how to best manage the effects of brain drain on their innovation and economic growth potential.
+
+% With brain drain being found as a significant effect in the literature, we're interested in developing a further understanding of its impact on innovation in both source and destination countries.
+% Specifically, we're interested in patenting trends amongst countries that highly-skilled immigrants migrate towards and how that affects the innovation of the source country.
+% Through focusing on the impact of highly-skilled immigrants through patenting, we can measure the improvement or lack thereof in innovation when a country experiences brain drain or, in contrast, brain gain.
+% This information can inform countries that are subject to brain drain and help develop policies that would lessen the effects of brain drain.
+% On the other side of the effect, the paper will also provide insight to destination countries on whether to continue appealing to high-skilled workers as well and which policies work best in winning over these individuals.
 
 
 % With brain drain being recognized as a significant phenomenon in the literature, we are interested in gaining a deeper understanding of its impact on innovation in both source and destination countries.
@@ -100,6 +106,17 @@ On the other side of the effect, the paper will also provide insight to destinat
 % In essence, this research seeks to answer the question of how significant the impact of brain drain is on innovation.
 
 \pointer{Identify probable data source and sample}
+
+In order to conduct this analysis, we will use the Global Innovation Index from the World Intellectual Property Organization (WIPO).
+The GII measures the innovation performance of countries and economies based on a variety of indicators, including research and development, education, and market sophistication.
+Additionally, we will use economic data from the World Bank's World Development Indicators as independent variables.
+These independent variables will include migration data, GDP per capita, education expenditure as a percentage of a country's GDP, and the ratio of employed to unemployed individuals in a country.
+% These variables were selected as they are commonly used in studies on migration and productivity, and they can provide a comprehensive view of the relationship between these two factors.
+The following linear regression equation will be used to model the relationship between the GII score and the independent variables:
+\begin{align*}
+     {Score} = \beta_{1}Mig + \beta_{2}{GDPperCapita} + \beta_{3}{EduExp\%} + \beta_{4}{Emp\%} + \epsilon
+\end{align*}
+This equation shows that the GII score (Score) is a function of the independent variables migration (Mig), GDP per capita (GDPperCapita), education expenditure as a percentage of GDP (EduExp\%), and the ratio of employed to unemployed individuals (Emp\%). Migration is lagged on 1, 5, 10, and 20 year intervals. \pointer{explain why we're lagging migration here. we have a paper from SIPER that explains it might be 20 years!}
 
 \printbibliography
 \end{document}
