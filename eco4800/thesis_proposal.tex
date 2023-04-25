@@ -17,9 +17,9 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-\lhead{Senior Thesis Draft}
+\lhead{}
 \chead{The Impact of Global Migration on Innovation}
-\rhead{Jumar Martin}
+\rhead{}
 
 \cfoot{\thepage}
 
@@ -39,7 +39,12 @@
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 
+\title{The Impact of Global Migration on Innovation}
+\author{Jumar Martin}
+\date{\today}
 \begin{document}
+
+\maketitle
 \section{Introduction}
 As the world becomes connected through the democratization of international travel, the disparate cultures that dot the land collide, engage, and in time blend.
 In tandem with culture, knowledge and talent also erode the political boundaries that have traditionally separated nations.
@@ -119,6 +124,8 @@ From the World Bank, we gathered the following data points from their World Deve
     \item \textbf{NY.GDP.PCAP.CD}: GDP per capita (current US\$)
     \item \textbf{SM.POP.NETM}: Net migration
     \item \textbf{SE.TER.CUAT.BA.ZS}: Educational attainment, at least Bachelor's or equivalent, population 25+
+    \item \item \textbf{SM.POP.TOTL.ZS}: Total Migrant Population
+    \item \item \item \textbf{SM.POP.TOTL}: Total Population
 \end{enumerate}
 
 From the World Intellectual Property Organization, we gathered the following data points from the Global Innovation Index:
@@ -154,31 +161,30 @@ Several statistical tests and diagnostics were performed to assess the validity 
 
 The Breusch-Pagan test for homoscedasticity is employed to assess the presence of heteroskedasticity in Model 1.
 The results of the test indicate that there is no evidence of heteroskedasticity, as the calculated test statistic (BP = 1.7119) has an associated p-value of 0.8874 with 5 degrees of freedom (Table \ref{tab:bptest}).
-This implies that the model's residuals exhibit constant variance, a key assumption for linear regression analysis.
+This implies that the model's residuals exhibit constant variance, an assumption that is key for a robust linear regression analysis.
 
 The ANOVA results provide valuable information about the statistical significance of the independent variables in Model 1.
-As shown in Table \ref{tab:anova_mig01}, log(Edu), log(EduExp), and log(lag.Mig01) emerge as statistically significant independents of the outcome variable, with p-values substantially below the 0.05 threshold.
-This suggests that these independents have a meaningful impact on the dependent variable in the model.
+As shown in Table \ref{tab:anova_mig01}, log(Edu), log(EduExp), and log(lag.Mig01) emerge as statistically significant predictors of the outcome variable, with p-values below the 0.05 threshold.
+This suggests that these independent variables have a meaningful impact on the dependent variable in the model.
 
 To assess the presence of multicollinearity among independent variables, Variance Inflation Factors (VIF) are calculated.
 The VIF values for all independent variables in Model 1 are below the commonly used threshold of 10 (Table \ref{tab:vif_mig01}), indicating that multicollinearity is not a concern and that the variables are not highly correlated with each other.
 
-Lastly, the coefficient estimates in Table \ref{tab:coef_mig01} demonstrate that an increase in log(Edu), log(EduExp), and log(lag.Mig01) is positively associated with the outcome variable.
-These coefficients offer insights into the direction and magnitude of the relationship between the and the dependent variable.
+Lastly, the coefficient estimates in Table \ref{tab:coef_mig01} demonstrate that an increase in log(Edu), log(EduExp), and log(lag.Mig01) is positively associated with the outcome variable. This implies that when an increase in these variables occurs, the dependent variable also increases.
 
 \subsection{Model 2: Migration Lagged 5 Years} \label{results-model2}
 
 For Model 2, the Breusch-Pagan test is also used to examine the presence of heteroskedasticity. The test results suggest no evidence of heteroskedasticity, as the test statistic (BP = 2.7898) has a p-value of 0.7324 with 5 degrees of freedom (Table \ref{tab:bptest}).
-This confirms that the assumption of constant variance in the model's residuals is met, supporting the validity of the linear regression analysis.
+This confirms that the assumption of constant variance in the model's residuals, which implies that the validity of the model should not be in question.
 
 The ANOVA results for Model 2 indicate that log(Edu), log(EduExp), and log(lag.Mig05) are statistically significant predictors of the outcome variable (Table \ref{tab:anova_mig05}).
-This implies that these variables contribute significantly to explaining the variation in the dependent variable.
+This implies that these variables contribute to explaining the variation in the dependent variable.
 
 In order to evaluate the presence of multicollinearity in Model 2, VIF values are calculated for all independent variables.
-The VIF values for all variables are below the threshold of 10 (Table \ref{tab:vif_Mig05}), suggesting that multicollinearity is not a concern in this model and that the indepdent variables are not highly correlated with each other.
+The VIF values for all variables are below the threshold of 2 (Table \ref{tab:vif_Mig05}), suggesting that multicollinearity is not a concern in this model and that the indepdent variables are not highly correlated with each other.
 
 Finally, the coefficient estimates in Table \ref{tab:coef_mig05} reveal that an increase in log(Edu), log(EduExp), and log(lag.Mig05) is positively associated with the outcome variable.
-These estimates provide valuable information regarding the direction and magnitude of the relationship between the independent variables and the dependent variable in the context of the Migration Lagged 5 Years model.
+When this occurs, the dependent variable also increases.
 
 
 
