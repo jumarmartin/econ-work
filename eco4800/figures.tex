@@ -1,0 +1,33 @@
+\documentclass[100pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+
+\usepackage[papersize={40in,10in},margin=0.5in]{geometry}
+
+\begin{document}
+\begin{table}
+    \centering
+    \begin{tabular}{lrrrrrr}
+        \hline
+        Variable    & Observations & Mean          & SD            & Median        & Min           & Max           \\
+        \hline
+        Year        & 16182        & 1990.95       & 17.91        & 1990.00       & 1960.00       & 2022.00       \\
+        Score       & 1036         & 36.22         & 11.78        & 33.80         & 6.00          & 68.40         \\
+        Rank        & 1030         & 68.13         & 38.47        & 68.00         & 1.00          & 142.00        \\
+        Edu         & 523          & 17.23         & 9.63         & 16.30         & 0.00          & 59.30         \\
+        Mig         & 16182        & -52677.16     & 487740.95    & -1032.60      & -5964272.00   & 4169413.00    \\
+        EduExp      & 5862         & 4.33          & 1.94         & 4.14          & 0.00          & 44.30         \\
+        TotEmp      & 7159         & 56.53         & 10.92        & 56.70         & 22.10         & 87.70         \\
+        TotPop      & 16152        & 196657700.55  & 687758191.25 & 6388218.00    & 2652.00       & 7891076029.00\\
+        Pat         & 4055         & 30326.77      & 159069.53    & 267.00        & 1.00          & 2380384.00    \\
+        GdpPerCap   & 12908        & 8213.54       & 16639.53     & 1883.09       & 12.79         & 234428.41     \\
+        MigPop      & 1534         & 9.90          & 14.79        & 3.69          & 0.03          & 88.40         \\
+        \hline
+    \end{tabular}
+    \caption{Summary Statistics}
+    \label{tab:summary_statistics}
+\end{table}
+
+\end{document}
